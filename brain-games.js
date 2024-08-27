@@ -1,4 +1,4 @@
 #!/usr/bin/env node
- const greetUser = require('..src/cli');
+const greetUser = require('./..src/cli');
 
-greetUser(); 
+greetUser();
