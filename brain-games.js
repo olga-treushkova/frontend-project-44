@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-const greetUser = require('./..src/cli');
+import getName from '../src/cli.js';
 
-greetUser();
+console.log('Welcome to the Brain Games!');
+getName();
