@@ -13,7 +13,7 @@ function startGame() {
   while (correctAnswers < 3) {
       let number = Math.floor(Math.random() * 100) + 1; 
       console.log(`Question: ${number}`);
-      let userAnswer = prompt("Your answer:");
+      let userAnswer = readlineSync.question("Your answer:");
 
       let correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
 
