@@ -4,11 +4,10 @@ import readlineSync from 'readline-sync';
 
   const getRandom = (min = 1, max = 100)=> Math.floor(Math.random()* (max - min) +1)+ min;
 
-
   const getRandomOperation = () => {
   const operations = ['+','-','*'];
   const randomNumber = Math.floor(Math.random()* operations.length);
-  return operations[randomNumber];
+  return operations[randomNumber]; 
 }
 
   const calc = (number1, operation, number2)=>{
@@ -20,7 +19,7 @@ return number1 - number2;
 case '*':
 return number1 * number2;
 }
-};
+}
 
 
 function newGame() {
@@ -40,8 +39,7 @@ function newGame() {
 const correctAnswer= calc(number1, operation, number2); 
 
       console.log(`Question: ${number1} ${operation} ${number2}`);
-      let userAnswer = readlineSync.question('Your answer: ');
-
+      const userAnswer = readlineSync.question('Your answer: ');
 
       if (userAnswer === correctAnswer) {
           console.log("Correct!");
