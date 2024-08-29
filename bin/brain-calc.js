@@ -1,12 +1,13 @@
 #!/usr/bin/env node 
+
 import readlineSync from 'readline-sync';
 
-  const getRandom = (min = 1, max = 100)=> Math.floor(Math.random()* (max - min) +1))+ min;
+  const getRandom = (min = 1, max = 100)=> Math.floor(Math.random()* (max - min) +1)+ min;
 
 
   const getRandomOperation = () => {
   const operations = ['+','-','*'];
-  const randomNumber = Math.floor(Math.random()*operation.length);
+  const randomNumber = Math.floor(Math.random()* operations.length);
   return operations[randomNumber];
 }
 
