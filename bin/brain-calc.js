@@ -19,10 +19,8 @@ return number1 - number2;
 case '*':
 return number1 * number2;
 }
-}
-
-
-function newGame() {
+  }
+export default function newGame() {
 
   console.log("Welcome to the Brain Games!");
   const userName = readlineSync.question('May I have your name? ');
@@ -32,8 +30,8 @@ function newGame() {
   let correctAnswers = 0;
 
   while (correctAnswers < 3) {
-      let number1 = getRandom(); 
-      let number2 = getRandom();
+      let number1 = getRandom(1, 100); 
+      let number2 = getRandom(1, 100);
       const operation = getRandomOperation();
 
 const correctAnswer= calc(number1, operation, number2); 
