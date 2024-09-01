@@ -1,5 +1,6 @@
 import { getNumber, start } from '../index.js';
 
+
 const result = () => {
   const progression = [];
   const first = getNumber();
