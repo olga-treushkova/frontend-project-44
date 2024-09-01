@@ -10,3 +10,6 @@
 
 link for the 'brain-calc' game:
 <a href="https://asciinema.org/a/uUgoTl72pp5j5hJcdKJNtjppH" target="_blank"><img src="https://asciinema.org/a/uUgoTl72pp5j5hJcdKJNtjppH.svg" /></a>
+
+link for the 'brain-gcd' game:
+<a href="https://asciinema.org/a/UNL3PmOzKn0gHPI9IDpYvmMZs" target="_blank"><img src="https://asciinema.org/a/UNL3PmOzKn0gHPI9IDpYvmMZs.svg" /></a>
