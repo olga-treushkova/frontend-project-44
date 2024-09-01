@@ -1,4 +1,4 @@
-import {getNumber, start} from '../src/games/index.js';
+import {getNumber, start} from '../index.js';
 
 const result = () => {
   const progression = [];
