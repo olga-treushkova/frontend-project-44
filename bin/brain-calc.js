@@ -8,7 +8,7 @@ import readlineSync from 'readline-sync';
   const operations = ['+','-','*'];
   const randomNumber = Math.floor(Math.random()* operations.length);
   return operations[randomNumber]; 
-}
+};
 
   const calc = (number1, operation, number2)=>{
     switch (operation) {
@@ -19,8 +19,8 @@ return number1 - number2;
 case '*':
 return number1 * number2;
 }
-  }
-export default function newGame() {
+  };
+const newGame = () => {
 
   console.log("Welcome to the Brain Games!");
   const userName = readlineSync.question('May I have your name? ');
@@ -37,11 +37,11 @@ export default function newGame() {
 const correctAnswer= calc(number1, operation, number2); 
 
       console.log(`Question: ${number1} ${operation} ${number2}`);
-      const userAnswer = readlineSync.question('Your answer: ');
+      const userAnswer = Number(readlineSync.question('Your answer: '));
 
       if (userAnswer === correctAnswer) {
           console.log("Correct!");
-          correctAnswer ++;
+          correctAnswers ++;
       }
        else {
           console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);

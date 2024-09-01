@@ -6,3 +6,7 @@
 
 
 <a href="https://asciinema.org/a/trbHjx9dqO4ijpRlWN72x51PY" target="_blank"><img src="https://asciinema.org/a/trbHjx9dqO4ijpRlWN72x51PY.svg" /></a>
+
+
+link for the 'brain-calc' game:
+<a href="https://asciinema.org/a/uUgoTl72pp5j5hJcdKJNtjppH" target="_blank"><img src="https://asciinema.org/a/uUgoTl72pp5j5hJcdKJNtjppH.svg" /></a>
