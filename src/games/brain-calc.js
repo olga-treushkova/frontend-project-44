@@ -8,6 +8,7 @@ const getRandomOperation = () => {
   return operations[randomNumber];
 };
 
+
 const calc = (number1, operation, number2) => {
   switch (operation) {
     case '+':
@@ -16,7 +17,8 @@ const calc = (number1, operation, number2) => {
       return number1 - number2;
     case '*':
       return number1 * number2;
-  }
+    default;
+    }
 };
 const newGame = () => {
   console.log('Welcome to the Brain Games!');
@@ -39,14 +41,13 @@ const newGame = () => {
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
       correctAnswers += 1;
-      }
-      else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    } else {
+    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
- }
-console.log(`Congratulations, ${userName}!`);
+}
+ console.log(`Congratulations, ${userName}!`);
 };
-
-export default newGame;
+  
+  export default newGame;
