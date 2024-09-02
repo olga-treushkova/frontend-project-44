@@ -16,7 +16,7 @@ const calc = (number1, operation, number2) => {
       return number1 - number2;
     case '*':
       return number1 * number2;
-      default: error(`Unknown operation: ${operation}`);
+    default: (`Unknown operation: ${operation}`);
   }
 };
 const newGame = () => {
