@@ -10,7 +10,7 @@ const isPrime = (num) => {
   return true;
 };
 
-  const playRound = () => {
+const playRound = () => {
   const randomNumber = Math.floor(Math.random() * 100) + 1;
   console.log(`Question: ${randomNumber}`);
   const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
@@ -19,9 +19,9 @@ const isPrime = (num) => {
 
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
-  return true;
+    return true;
   }
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
   return false;
 };
 
@@ -35,8 +35,8 @@ const game = () => {
   for (let i = 0; i < rounds; i += 1) {
     const isCorrect = playRound();
     if (!isCorrect) {
-    console.log(`Let's try again, ${userName}!`);
-    return;
+      console.log(`Let's try again, ${userName}!`);
+      return;
     }
   }
 

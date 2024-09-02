@@ -10,7 +10,7 @@ const gcd = (a, b) => {
 const getRandom = (min = 1, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 const runGame = () => {
-console.log('Welcome to the Brain Games!');
+  console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log('Find the greatest common divisor of given numbers.');
@@ -34,8 +34,7 @@ console.log('Welcome to the Brain Games!');
       return;
     }
   }
-
-    console.log(`Congratulations, ${userName}!`);
-    };
+  console.log(`Congratulations, ${userName}!`);
+};
 
 export default runGame;
