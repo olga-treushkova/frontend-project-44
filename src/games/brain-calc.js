@@ -1,30 +1,56 @@
-import allGames from '../src/index.js';
+#!/usr/bin/env node 
 
-const operations = ['+', '-', '*'];
+import readlineSync from 'readline-sync';
 
-const gameDescription = 'What is the result of the expression?';
+  const getRandom = (min = 1, max = 100)=> Math.floor(Math.random()* (max - min) +1)+ min;
 
-const calc = (num1, operation, num2) => {
+  const getRandomOperation = () => {
+  const operations = ['+','-','*'];
+  const randomNumber = Math.floor(Math.random()* operations.length);
+  return operations[randomNumber]; 
+};
+
+  const calc = (number1, operation, number2)=>{
     switch (operation) {
-        case '+':
-            return num1 + num2;
-        case '-':
-            return num1 - num2;
-        case '*':
-            return num1 * num2;
-    }
-};
+case '+':
+return number1 + number2;
+case '-':
+return number1 - number2;
+case '*':
+return number1 * number2;
+}
+  };
+const newGame = () => {
 
-const generateRound = () => {
-    let number1 = getRandom(1, 100);
-    let number2 = getRandom(1, 100);
-    const operation = getRandomOperation();
+  console.log("Welcome to the Brain Games!");
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+  console.log('What is the result of the expression?');
 
+  let correctAnswers = 0;
 
-    const question = '${number1} ${operation} ${number2}';
-    const correctAnswer = String(calc(number1, operation, number2));
+  while (correctAnswers < 3) {
+      let number1 = getRandom(1, 100); 
+      let number2 = getRandom(1, 100);
+      const operation = getRandomOperation();
 
-    return [question, correctAnswer];
-};
+const correctAnswer= calc(number1, operation, number2); 
 
-export default () => allGames(gameDescription, generateRound);
+      console.log(`Question: ${number1} ${operation} ${number2}`);
+      const userAnswer = Number(readlineSync.question('Your answer: '));
+
+      if (userAnswer === correctAnswer) {
+          console.log("Correct!");
+          correctAnswers ++;
+      }
+       else {
+          console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+          console.log(`Let's try again, ${userName}!`);
+          return;
+        }
+  }
+
+  console.log(`Congratulations, ${userName}!`);
+}
+
+newGame();
