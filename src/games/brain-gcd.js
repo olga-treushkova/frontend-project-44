@@ -38,4 +38,4 @@ const runGame = () => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-runGame();
+export default runGame;

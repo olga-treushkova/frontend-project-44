@@ -53,4 +53,4 @@ const correctAnswer= calc(number1, operation, number2);
   console.log(`Congratulations, ${userName}!`);
 }
 
-newGame();
+export default newGame;
