@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const gcd = (a, b) => {
+const gcd = () => {
   while (b !== 0) {
     [a, b] = [b, a % b];
   }
