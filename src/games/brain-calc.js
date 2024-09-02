@@ -17,7 +17,6 @@ const calc = (number1, operation, number2) => {
       return number1 - number2;
     case '*':
       return number1 * number2;
-    default;
     }
 };
 const newGame = () => {
@@ -40,14 +39,14 @@ const newGame = () => {
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
-      correctAnswers += 1;
-    } else {
+      correctAnswers += 1; }
+    else {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }
-}
- console.log(`Congratulations, ${userName}!`);
+  }
+  console.log(`Congratulations, ${userName}!`);
 };
   
   export default newGame;
