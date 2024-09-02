@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
 
 const gcd = (a, b) => {
-    if(a === 0) {
-        return b;
-    }
-    if(b === 0) {
-        return a;
-    }
-    return gcd(b, a % b);
-  };
+  if (a === 0) {
+    return b;
+  }
+  if (b === 0) {
+    return a;
+  }
+  return gcd(b, a % b);
+};
 
 const getRandom = (min = 1, max = 100) => Math.floor(Math.random() * (max - min + 1)) + min;
 
