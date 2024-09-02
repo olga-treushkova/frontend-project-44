@@ -31,4 +31,4 @@ function startGame() {
   console.log(`Congratulations, ${userName}!`);
 }
 
-startGame();
+export default startGame;

@@ -18,7 +18,8 @@ const playRound =() => {
            progression[hiddenIndex] = '..';
    
            console.log(`Question: ${progression.join(' ')}`);
-            const userAnswer = readlineSync.question('Your answer: ');
+            const userAnswer = Number(readlineSync.question('Your answer: '));
+
    
                if (userAnswer === hiddenNumber) {
                    console.log('Correct!');
