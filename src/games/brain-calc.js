@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const getRandom = (min = 1, max = 100)=> Math.floor(Math.random()* (max - min) +1)+ min;
+const getRandom = (min = 1, max = 100) => Math.floor(Math.random()* (max - min) +1)+ min;
 
 const getRandomOperation = () => {
 const operations = ['+','-','*'];
@@ -8,7 +8,7 @@ const randomNumber = Math.floor(Math.random()* operations.length);
 return operations[randomNumber]; 
 };
 
-const calc = (number1, operation, number2)=>{
+const calc = (number1, operation, number2) => {
 switch (operation) {
 case '+':
 return number1 + number2;
@@ -32,7 +32,7 @@ while (correctAnswers < 3) {
     let number2 = getRandom(1, 100);
     const operation = getRandomOperation();
 
-const correctAnswer= calc(number1, operation, number2); 
+const correctAnswer = calc(number1, operation, number2); 
 
     console.log(`Question: ${number1} ${operation} ${number2}`);
     const userAnswer = Number(readlineSync.question('Your answer: '));
