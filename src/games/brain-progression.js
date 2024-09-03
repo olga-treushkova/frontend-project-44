@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import gameLogic from '..';
 
 const playRound = () => {
   const length = Math.floor(Math.random() * 6) + 5;
@@ -26,20 +27,7 @@ const playRound = () => {
 };
 
 const proGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  console.log('What number is missing in the progression?');
-
-  const rounds = 3;
-  for (let i = 0; i < rounds; i += 1) {
-    const isCorrect = playRound();
-    if (!isCorrect) {
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+  gameLogic(newRound);
 };
 
 export default proGame;
