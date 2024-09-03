@@ -11,7 +11,7 @@ function getName() {
   return userName;
 }
 function getAnswer() {
-
+  const number = Math.floor(Math.random() * 100);
   const correctAnswer = (number % 2 === 0);
   const userAnswer = readlineSync.question('Your answer: ');
   if (userAnswer !== correctAnswer) {
