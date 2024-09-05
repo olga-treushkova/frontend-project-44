@@ -1,6 +1,7 @@
-import readlineSync from 'readline-sync';
+import gameLogic from '../index.js';
+import getRandom from '../randomNumber.js';
 
-const getRandom = (min = 1, max = 100) => Math.floor(Math.random() * (max - min) + 1) + min;
+const task = 'What is the result of the expression?';
 
 const getRandomOperation = () => {
   const operations = ['+', '-', '*'];
@@ -20,33 +21,18 @@ const calc = (number1, operation, number2) => {
       return null;
   }
 };
-const newGame = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  console.log('What is the result of the expression?');
 
-  let correctAnswers = 0;
-
-  while (correctAnswers < 3) {
+const getRound = () => {
     const number1 = getRandom(1, 100);
     const number2 = getRandom(1, 100);
     const operation = getRandomOperation();
-
-    const correctAnswer = calc(number1, operation, number2);
-
-    console.log(`Question: ${number1} ${operation} ${number2}`);
-    const userAnswer = Number(readlineSync.question('Your answer: '));
-
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      correctAnswers += 1;
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+    const question = `${number1} ${operation} ${number2}`;
+    const correct = String(calc(number1, operation, number2));
+    return [question, correct];
 };
+
+ const newGame = () => {
+    gameLogic(task, getRound);
+};  
+
 export default newGame;

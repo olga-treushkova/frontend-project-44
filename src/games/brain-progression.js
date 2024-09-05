@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import gameLogic from '..';
+import gameLogic from '../index.js';
 
 const playRound = () => {
   const length = Math.floor(Math.random() * 6) + 5;
@@ -27,7 +27,7 @@ const playRound = () => {
 };
 
 const proGame = () => {
-  gameLogic(newRound);
+  gameLogic();
 };
 
 export default proGame;

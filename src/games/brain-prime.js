@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import gameLogic from '..';
+import gameLogic from '../index.js';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -27,7 +27,7 @@ const playRound = () => {
 };
 
 const game = () => {
-    gameLogic(newRound);
+    gameLogic();
 };
 
 export default game;

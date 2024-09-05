@@ -1,30 +1,22 @@
-import readlineSync from 'readline-sync';
+import gameLogic from '../index.js';
+import getRandom from '../randomNumber.js';
 
-function startGame() {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  let correctAnswers = 0;
+const start = (number) => {
+    const correctAnswer = (number % 2 === 0);
+    return correctAnswer;
+};
 
-  while (correctAnswers < 3) {
-    const number = Math.floor(Math.random() * 100) + 1;
-    console.log(`Question: ${number}`);
-    const userAnswer = readlineSync.question('Your answer:');
-    const correctAnswer = (number % 2 === 0) ? 'yes' : 'no';
+const getRound = () => {
+const number = getRandom();
+const question = `${number}`;
+const correct = start(number) ? 'yes' : 'no';
+return [question, correct];
+};
 
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-      correctAnswers += 1;
-    } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-  }
-
-  console.log(`Congratulations, ${userName}!`);
-}
-
+const startGame = () => {
+    gameLogic(task, getRound);
+};  
+   
 export default startGame;

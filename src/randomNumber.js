@@ -1,5 +1,9 @@
 import readlineSync from 'readline-sync';
 
-const getRandom = Math.floor(Math.random() * 100) + 1;
-
+const getRandom = () => {
+    const getNumber = Math.floor(Math.random() * 100) + 1;
+    return getNumber;
+};
 export default getRandom;
+
+
