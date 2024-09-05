@@ -14,15 +14,15 @@ const gcd = (a, b) => {
 };
 
 const getRound = () => {
-    const number1 = getRandom(1, 100);
-    const number2 = getRandom(1, 100);
-    const question = `${number1} ${number2}`;
-    const correct = String(gcd(number1, number2));
-    return [question, correct];
+  const number1 = getRandom(1, 100);
+  const number2 = getRandom(1, 100);
+  const question = `${number1} ${number2}`;
+  const correct = String(gcd(number1, number2));
+  return [question, correct];
 };
 
 const runGame = () => {
-    gameLogic(task, getRound);
+  gameLogic(task, getRound);
 };
 
 export default runGame;

@@ -14,14 +14,14 @@ const isPrime = (num) => {
 };
 
 const getRound = () => {
-    const number = getRandom();
-    const question = `${number}`;
-    const correct = isPrime(number) ? 'yes' : 'no';
-    return [question, correct];
+  const number = getRandom();
+  const question = `${number}`;
+  const correct = isPrime(number) ? 'yes' : 'no';
+  return [question, correct];
 };
 
 const game = () => {
-    gameLogic(task, getRound);
+  gameLogic(task, getRound);
 };
 
 export default game;
