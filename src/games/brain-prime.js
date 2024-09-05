@@ -1,5 +1,7 @@
-import readlineSync from 'readline-sync';
 import gameLogic from '../index.js';
+import getRandom from '../randomNumber.js';
+
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -11,23 +13,15 @@ const isPrime = (num) => {
   return true;
 };
 
-const playRound = () => {
-  const randomNumber = Math.floor(Math.random() * 100) + 1;
-  console.log(`Question: ${randomNumber}`);
-  const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
-
-  const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
-
-  if (userAnswer === correctAnswer) {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-  return false;
+const getRound = () => {
+    const number = getRandom();
+    const question = `${number}`;
+    const correct = isPrime(number) ? 'yes' : 'no';
+    return [question, correct];
 };
 
 const game = () => {
-    gameLogic();
+    gameLogic(task, getRound);
 };
 
 export default game;
