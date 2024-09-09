@@ -20,8 +20,8 @@ const getRound = () => {
   return [question, String(hiddenNumber)];
 };
 
-const proGame = () => {
+const runProgression = () => {
   gameLogic(task, getRound);
 };
 
-export default proGame;
+export default runProgression;

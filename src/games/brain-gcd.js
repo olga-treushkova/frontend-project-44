@@ -21,8 +21,8 @@ const getRound = () => {
   return [question, correct];
 };
 
-const runGame = () => {
+const runGcd = () => {
   gameLogic(task, getRound);
 };
 
-export default runGame;
+export default runGcd;

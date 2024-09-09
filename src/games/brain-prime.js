@@ -20,8 +20,8 @@ const getRound = () => {
   return [question, correct];
 };
 
-const game = () => {
+const runPrime = () => {
   gameLogic(task, getRound);
 };
 
-export default game;
+export default runPrime;
