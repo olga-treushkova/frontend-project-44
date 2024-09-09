@@ -2,6 +2,8 @@ import startGame from '../index.js';
 import getRandom from '../helpers.js';
 
 const task = 'What is the result of the expression?';
+const min = 0; 
+const max = 100;
 
 const getRandomOperation = () => {
   const operations = ['+', '-', '*'];
@@ -23,8 +25,8 @@ const calc = (number1, operation, number2) => {
 };
 
 const getRound = () => {
-  const number1 = getRandom(1, 100);
-  const number2 = getRandom(1, 100);
+  const number1 = getRandom(min, max);
+  const number2 = getRandom(min, max);
   const operation = getRandomOperation();
   const question = `${number1} ${operation} ${number2}`;
   const correctAnswer = String(calc(number1, operation, number2));
