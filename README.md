@@ -1,11 +1,12 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/olga-treushkova/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/olga-treushkova/frontend-project-44/actions)
 
-## Учебный проект, который содержит набор математических игр на JavaScript.
+[![Maintainability](https://api.codeclimate.com/v1/badges/ddc9a3354d45b190ff7c/maintainability)](https://codeclimate.com/github/olga-treushkova/frontend-project-44/maintainability)
+
+# Учебный проект, который содержит набор математических игр на JavaScript.
 
 ## Системные требования
-* Необходима установка node.js.
-Node.js >= V22.7.0
+* Необходима установка node.js версии 22.7.0
 
 ## Инструкция по установке и запуску:
 * склонировать репозиторий 
@@ -19,7 +20,7 @@ npm link
 ```
 * запустить игру вводом в терминал 
 
-# Игры:
+## Игры:
   
 ## Игра "Проверка на чётность"
 ввод команды в терминал 
@@ -61,7 +62,3 @@ brain-prime
 ```
 ### Пример функционала игры на asciinema:
 <a href="https://asciinema.org/a/SxHzx8HcaI4dVaUfw2bv6MI3h" target="_blank"><img src="https://asciinema.org/a/SxHzx8HcaI4dVaUfw2bv6MI3h.svg" /></a>
-
-
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/ddc9a3354d45b190ff7c/maintainability)](https://codeclimate.com/github/olga-treushkova/frontend-project-44/maintainability)
