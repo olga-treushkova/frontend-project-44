@@ -1,3 +1,4 @@
+import startGame from '../index.js';
 import gameLogic from '../index.js';
 import getRandom from '../randomNumber.js';
 
@@ -21,7 +22,7 @@ const getRound = () => {
 };
 
 const runPrime = () => {
-  gameLogic(task, getRound);
+  startGame(task, getRound);
 };
 
 export default runPrime;

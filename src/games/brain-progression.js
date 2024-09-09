@@ -1,3 +1,4 @@
+import startGame from '../index.js';
 import gameLogic from '../index.js';
 import { getRandomIndex } from '../randomNumber.js';
 
@@ -21,7 +22,7 @@ const getRound = () => {
 };
 
 const runProgression = () => {
-  gameLogic(task, getRound);
+  startGame(task, getRound);
 };
 
 export default runProgression;

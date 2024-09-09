@@ -1,3 +1,4 @@
+import startGame from '../index.js';
 import gameLogic from '../index.js';
 import getRandom from '../randomNumber.js';
 
@@ -32,7 +33,7 @@ const getRound = () => {
 };
 
 const runCalc = () => {
-  gameLogic(task, getRound);
+  startGame(task, getRound);
 };
 
 export default runCalc;

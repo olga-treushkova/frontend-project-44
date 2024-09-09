@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const gameLogic = (task, getRound) => {
+const startGame = (task, getRound) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -19,4 +19,4 @@ const gameLogic = (task, getRound) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
-export default gameLogic;
+export default startGame;
