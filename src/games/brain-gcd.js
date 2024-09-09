@@ -2,7 +2,7 @@ import startGame from '../index.js';
 import getRandom from '../helpers.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
-const min = 0; 
+const min = 0;
 const max = 100;
 
 const gcd = (a, b) => {

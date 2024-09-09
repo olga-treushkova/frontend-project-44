@@ -2,7 +2,7 @@ import startGame from '../index.js';
 import getRandom from '../helpers.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-const min = 0; 
+const min = 0;
 const max = 100;
 
 const start = (number) => {

@@ -3,13 +3,12 @@ import startGame from '../index.js';
 const task = 'What number is missing in the progression?';
 
 const getRandomIndex = () => {
-    const length = Math.floor(Math.random() * 6) + 5;
-    const first = Math.floor(Math.random() * 10) + 1;
-    const step = Math.floor(Math.random() * 10) + 1;
-    return [length, first, step];
-  }
-  
-  const getRound = () => {
+  const length = Math.floor(Math.random() * 6) + 5;
+  const first = Math.floor(Math.random() * 10) + 1;
+  const step = Math.floor(Math.random() * 10) + 1;
+  return [length, first, step];
+};
+const getRound = () => {
   const [length, first, step] = getRandomIndex();
   const progression = [];
   for (let i = 0; i < length; i += 1) {
