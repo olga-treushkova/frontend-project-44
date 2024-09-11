@@ -5,15 +5,15 @@ const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 const min = 0;
 const max = 100;
 
-const start = (number) => {
-  const userAnswer = (number % 2 === 0);
-  return userAnswer;
+const isEven = (number) => {
+  const result = number % 2 === 0;
+  return result;
 };
 
 const getRound = () => {
   const number = randomNumber(min, max);
-  const question = `${number}`;
-  const correctAnswer = start(number) ? 'yes' : 'no';
+  const question = String(number);
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
