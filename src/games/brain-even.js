@@ -1,5 +1,5 @@
 import startGame from '../index.js';
-import getRandom from '../helpers.js';
+import randomNumber from '../helpers.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 const min = 0;
@@ -11,7 +11,7 @@ const start = (number) => {
 };
 
 const getRound = () => {
-  const number = getRandom(min, max);
+  const number = randomNumber(min, max);
   const question = `${number}`;
   const correctAnswer = start(number) ? 'yes' : 'no';
   return [question, correctAnswer];
