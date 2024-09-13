@@ -1,5 +1,5 @@
 import startGame from '../index.js';
-import randomNumber from '../helpers.js';
+import getRandomNumber from '../helpers.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const min = 0;
@@ -9,15 +9,17 @@ const isPrime = (num) => {
   if (num <= 1) {
     return false;
   }
-  for (let i = 2; i <= Math.sqrt(num); i += 1) {
+  const maxDivisor = Math.sqrt(num);
+  
+  for (let i = 2; i <= maxDivisor; i += 1) {
     if (num % i === 0) return false;
   }
   return true;
 };
 
 const getRound = () => {
-  const number = randomNumber(min, max);
-  const question = `${number}`;
+  const number = getRandomNumber(min, max);
+  const question = String(number);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };

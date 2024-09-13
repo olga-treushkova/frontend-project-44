@@ -1,12 +1,10 @@
 import startGame from '../index.js';
-import randomNumber from '../helpers.js';
+import getRandomNumber from '../helpers.js';
 
 const operations = ['+', '-', '*'];
 const task = 'What is the result of the expression?';
 const min = 0;
 const max = 100;
-
-const randomNum = operations[Math.floor(Math.random() * operations.length)];
 
 const calc = (number1, operation, number2) => {
   switch (operation) {
@@ -22,9 +20,10 @@ const calc = (number1, operation, number2) => {
 };
 
 const getRound = () => {
-  const number1 = randomNumber(min, max);
-  const number2 = randomNumber(min, max);
-  const operation = randomNum;
+  const getRandomOperation = operations[getRandomNumber(0, operations.length - 1)];
+  const number1 = getRandomNumber(min, max);
+  const number2 = getRandomNumber(min, max);
+  const operation = getRandomOperation;
   const question = `${number1} ${operation} ${number2}`;
   const correctAnswer = String(calc(number1, operation, number2));
   return [question, correctAnswer];
